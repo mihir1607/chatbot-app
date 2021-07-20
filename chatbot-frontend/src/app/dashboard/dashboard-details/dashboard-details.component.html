@@ -1,0 +1,27 @@
+<div class="full-display">
+    <div class="container">
+        <h3>User Details</h3>
+        <div class="username-div">
+            <label for="username" id="name-label">Username: </label>
+            <input id="username" [(ngModel)]="name" placeholder="Username" autocomplete="off">
+            <button (click)="updateName()" class="btn">Update username</button>
+        </div><br>
+        <div class="email-div">
+            <label for="email" id="email-label">Email: </label>
+            <input id="email" [(ngModel)]="mail" placeholder="Mail" autocomplete="off" disabled><br>
+        </div><br>
+        <div class="address-div">
+            <label for="address">Address: </label>
+            <textarea id="address" name="address" rows="4" cols="50" [(ngModel)]="address" placeholder="Address"></textarea>
+            <button (click)="updateAddress()" class="btn">Submit</button>
+        </div><br>
+        <div class="change-password">
+            <h4>Change Password</h4>
+            <label for="password" id="password-label">New Password: </label>
+            <input type="password" id="password" [(ngModel)]="password" placeholder="New password" autocomplete="off"><br><br>
+            <label for="rep-password" id="rep-password-label">Repeat Password: </label>
+            <input type="password" id="rep-password" [(ngModel)]="repeatPassword" placeholder="Repeat password" autocomplete="off"><br><br>
+            <button (click)="updatePassword()" class="btn" style="margin-left: 150px;">Change Password</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="full-screen">
+    <div class="container">
+        <div class="chat-display">
+            <div class="chat-parent" id="display">
+                <div class="msg" *ngFor="let int of interactions">
+                    <div class="new-line"></div>
+                    <div class="bot" *ngIf="int.sender === 'bot'">
+                        <div class="bot-msg box">
+                            <h5>ElectroBot</h5>
+                            <p *ngFor="let s of int.reply">{{s}}</p>
+                            <p style="font-size: 75%;">{{int.time}}</p>
+                        </div>
+                    </div>
+                    <div class="user" *ngIf="int.sender === 'user'">
+                        <div class="user-msg box">
+                            <h5>You</h5>
+                            <p>{{int.chat}}</p>
+                            <p style="font-size: 75%;">{{int.time}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-space"></div>
+            <div class="chat-input">
+                <input type="text" [(ngModel)]="query" placeholder="Type a message" autocomplete="off">
+                <button (click)="addMessage()" class="send"><i class="fa fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

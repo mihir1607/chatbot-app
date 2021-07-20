@@ -1,0 +1,46 @@
+.full-page {
+    background-color: #fff;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.container .greeting {
+    padding: 5% 0;
+    text-transform: none;
+    text-align: center;
+    font-size: 150%;
+    font-weight: 500;
+    margin: 0;
+}
+
+.container .second-greeting {
+    text-align: center;
+    font-size: 120%;
+    font-weight: 400;
+    margin-bottom: 10%;
+}
+
+.website-elements {
+    list-style: none;
+    padding-bottom: 2%;
+}
+
+.website-elements li {
+    margin-bottom: 5%;
+}
+
+.website-elements li h4 {
+    font-size: 135%;
+    margin: 0;
+    font-weight: 400;
+}
+
+.website-elements li p {
+    font-size: 120%;
+    font-weight: 350;
+    text-align: justify;
+}
+

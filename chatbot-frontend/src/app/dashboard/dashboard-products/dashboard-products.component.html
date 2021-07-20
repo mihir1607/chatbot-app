@@ -1,0 +1,18 @@
+<div class="full-screen">
+    <div class="container">
+        <h3>Take a look at the wide range of products we have for you</h3>
+        <div class="items-list" *ngFor="let product of products">
+            <img src={{product.img}}>
+            <h4>Description:</h4>
+            <p class="desc-para"><span style="font-weight:450">{{product.name}}</span><br><br>{{product.desc}}</p>
+            <h5>Manufacturer:</h5>
+            <p class="manu-para">{{product.manufacturer}}</p>
+            <h6>Price:</h6>
+            <p class="price-para">&#8377;{{product.price}}</p>
+            <h5>Chatbot code:</h5>
+            <p class="code">{{product.code}}</p>
+            <div class="clearfix"></div>
+            <hr>
+        </div>
+    </div>
+</div>

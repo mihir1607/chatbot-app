@@ -1,0 +1,77 @@
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding-top: 50px;
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 45px;
+    font-weight: 500;
+    font-size: 120%;
+}
+
+input, textarea {
+    outline: none;
+}
+
+#name-label {
+    padding-right: 40px;
+}
+
+#username {
+    margin-right: 95px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#email-label {
+    padding-right: 80px;
+}
+
+#email {
+    margin-right: 40px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.address-div label, textarea {
+    vertical-align: middle;
+}
+
+.address-div label {
+    padding-right: 57px;
+}
+
+.address-div textarea {
+    border-radius: 5px;
+    border: 2px solid;
+    margin-right: 40px;
+}
+
+.btn {
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+#password-label {
+    padding-right: 40px;
+}
+
+#rep-password-label {
+    padding-right: 20px;
+}
+
+#password, #rep-password {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 300px;
+}

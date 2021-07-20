@@ -1,0 +1,13 @@
+<!-- <h2>Dashboard</h2> -->
+<div class="dashboard-header" *ngIf="isAuthenticated">
+    <h2>Welcome {{name}}</h2>
+    <button (click)="logoutUser()" class="btn">Logout</button>
+    <ul class="main-nav">
+        <li><a routerLink="home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="products" routerLinkActive="active">Products</a></li>
+        <li><a routerLink="chatbot" routerLinkActive="active">Chatbot</a></li>
+        <li><a routerLink="about-us" routerLinkActive="active">About Us</a></li>
+        <li><a routerLink="details" routerLinkActive="active">Details</a></li>
+    </ul>
+</div>
+<router-outlet *ngIf="isAuthenticated" #routerOutlet="outlet"></router-outlet>

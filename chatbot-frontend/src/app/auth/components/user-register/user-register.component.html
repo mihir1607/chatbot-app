@@ -1,0 +1,14 @@
+<div class="container">
+    <h3>Sign Up</h3>
+    <div class="input-fields">
+        <div *ngIf="!(this.success)" class="account-not-created"></div>
+        <div *ngIf="this.success" class="account-created">{{ this.message }}</div>
+        <input id="username" [(ngModel)]="user.username" placeholder="Username" autocomplete="off"><br>
+        <input id="email" [(ngModel)]="user.email" placeholder="Email" autocomplete="off"><br>
+        <input type="password" id="password" [(ngModel)]="user.password" placeholder="Password" autocomplete="off"><br>
+        <input type="password" id="repeat-password" [(ngModel)]="repeatPassword" placeholder="Re-enter Password" autocomplete="off"><br>
+        <button (click)="addUser()" class="btn">Register</button>
+        <p>Already have an account?</p>
+        <a href="/user-login" class="sign-in">Login here</a>
+    </div>
+</div>

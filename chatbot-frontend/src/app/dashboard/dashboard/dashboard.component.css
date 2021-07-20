@@ -1,0 +1,84 @@
+.dashboard-header {
+    margin: 0;
+    height: 30%;
+    background-color: #166fe5;
+    color: #fff;
+}
+
+.dashboard-header h2 {
+    text-align: center;
+    display: inline-block;
+    padding: 2.5% 2.5% 2.5% 620px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.main-nav {
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 5%;
+    margin-bottom: 1%;
+}
+
+.main-nav li a:link, 
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #fff;
+}
+
+.active {
+    border-bottom: 2px solid #fff;
+    text-transform: uppercase;
+}
+
+/* .main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #fff;
+}
+
+li .active {
+    text-transform: uppercase;
+} */
+
+/* .active {
+    border-bottom: 2px solid #000;
+    text-transform: uppercase;
+} */
+
+button {
+    width: 10%;
+    margin: 40px 2%;
+    font-size: 15px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: 200px;
+    background-color: #166fe5;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: 700;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    cursor: pointer;
+    float: right;
+}
+
+button:hover {
+    color: #166fe5;
+    background-color: #fff;
+    border: 2px solid #fff;
+}

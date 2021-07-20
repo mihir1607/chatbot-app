@@ -1,0 +1,85 @@
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+
+.container h3 {
+    text-align: center;
+    padding: 5% 0;
+    font-weight: 500;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.items-list {
+    padding-top: 2%;
+}
+
+.items-list img {
+    float: left;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding-bottom: 2%;
+    padding-right: 4%;
+}
+
+.items-list h4 {
+    float: left;
+    width: 10%;
+    padding-left: 2%;
+    margin-top: 1%;
+    font-weight: 400;
+    padding-right: 2%;
+}
+
+.items-list .desc-para {
+    margin-top: 1%;
+    float: left;
+    padding-right: 20%;
+    width: 40%;
+    text-align: justify;
+}
+
+.items-list h5 {
+    float: left;
+    padding-left: 2%;
+    padding-right: 0.8%;
+    font-size: 100%;
+    font-weight: 400;
+    margin: 0;
+}
+
+.items-list .manu-para {
+    margin: 0 auto 2% auto;
+    float: left;
+    padding-right: 20%;
+    width: 40%;
+    text-align: justify;
+}
+
+.items-list h6 {
+    float: left;
+    padding-left: 2%;
+    padding-right: 7.5%;
+    font-size: 100%;
+    font-weight: 400;
+    margin: 0 auto 1% auto;
+}
+
+.items-list .price-para {
+    margin-top: 0;
+    float: left;
+    padding-right: 20%;
+    width: 40%;
+    text-align: justify;
+}
+
+.code {
+    padding-left: 10%;
+}
