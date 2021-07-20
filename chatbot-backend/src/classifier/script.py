@@ -30,7 +30,6 @@ GREETING_INPUTS    = ("hello", "hi")
 GREETING_RESPONSES = ["Hi", "Hey", "Hi there"]
 FILENAME           = "src/classifier/faq_new.txt" #For running from Node.js
 # FILENAME           = "faq_new.txt"  #For running from python script
-# FILENAME = "amazon_faqs.csv"
 
 #Global Variables
 lem = nltk.stem.WordNetLemmatizer()
@@ -100,10 +99,8 @@ p = "src/classifier/clf.pkl" #For running from Node.js
 # p = "clf.pkl" #For running from python script
 my_file = Path(p)
 if my_file.is_file():
-    # print('File exists')
     classifier = pickle.load(open(p, 'rb'))
 else:
-    # print('File doesnt exist')
     classifier = nltk.MaxentClassifier.train(train_set)
     pickle.dump(classifier, open(p, 'wb'))
 #classifier = nltk.NaiveBayesClassifier.train(train_set) #If you need to test Naive Bayes as well
@@ -138,26 +135,6 @@ while s_count < len(sent_tokens):
     else:
         s_count+=1
         
-#Response Fetching
-# flag=True
-# print(colored("NEO:\nI am Neo, I have all the answers If you want to exit, type Ciao",'blue',attrs=['bold']))
-# while(flag==True):
-#     print(colored("\nYOU:",'red',attrs=['bold']))
-#     u_input = sys.argv[1]
-#     u_input = u_input.lower()
-#     if(u_input!='ciao'):
-#         if(greet(u_input)!=None):
-#             print(colored("\nNEO:",'blue',attrs=['bold']))
-#             print(greet(u_input))
-#         else:
-#             print(colored("\nNEO:",'blue',attrs=['bold']))
-#             print(colored(match(u_input).strip().capitalize(),'blue'))
-#             q_list.remove(u_input)
-#     else:
-#         flag=False
-#         print(colored("\nNEO: Bye! take care..",'blue', attrs=['bold']))
-
-# u_input = sys.argv[1]
 u_input = input()
 u_input = u_input.lower()
 if(greet(u_input)!=None):
@@ -165,6 +142,3 @@ if(greet(u_input)!=None):
 else:
     print(match(u_input).strip().capitalize())
     q_list.remove(u_input)
-
-# print('First param: ' + sys.argv[1])
-# sys.stdout.flush()
