@@ -25,15 +25,15 @@ const chatSchema = new mongoose.Schema({
         ref: 'User'
     }
 });
-
+// Funciton to get current date and time and return a formatted date
 chatSchema.statics.getTime = () => {
     const now = new Date();
     const formattedDate = date.format(now, 'MMM DD YYYY, hh:mm A');
     return formattedDate;
 };
-
+// Function to get reply for the message sent by the user
 chatSchema.statics.getBotReply = async (userMsg) => {
-    
+    // Function to get message from the classifier
     const getReplyPromise = (msg) => {
         return new Promise((resolve, reject) => {
             const pyshell = new PythonShell('src/classifier/script.py');
@@ -88,6 +88,8 @@ chatSchema.statics.getBotReply = async (userMsg) => {
             }
         } else {
             botReply = await getReplyPromise(userMsg);
+            sentences = botReply.split('.');
+            botReply = sentences[0] + '.';
         }
         return botReply;
     } catch (error) {

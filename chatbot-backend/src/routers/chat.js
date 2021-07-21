@@ -2,7 +2,7 @@ const express = require('express');
 const Chat = require('../models/chat');
 const auth = require('../middleware/auth');
 const router = new express.Router();
-
+// Route method to post new message
 router.post('/chats', auth, async (req, res) => {
     const time = Chat.getTime();
     const chat = new Chat({
@@ -29,7 +29,7 @@ router.post('/chats', auth, async (req, res) => {
         res.status(400).send(error);
     };
 });
-
+// Route method to get previous messages
 router.get('/chats', auth, async (req, res) => {
     try {
         await req.user.populate('chats').execPopulate();

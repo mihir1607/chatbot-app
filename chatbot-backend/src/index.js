@@ -6,7 +6,7 @@ const chatRouter = require('./routers/chat');
 
 const app = express();
 const port = process.env.PORT || 3000;
-
+// Method to declare headers for access across the domain
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(userRouter);
 app.use(productRouter);
 app.use(chatRouter);
-
+// Method for listening for events
 app.listen(port, () => {
     console.log('Server is up on port ' + port);
 });

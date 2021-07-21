@@ -3,7 +3,7 @@ const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const Chat = require('./chat');
-
+// Declaring schema for user
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -39,13 +39,13 @@ const userSchema = new mongoose.Schema({
         }
     }]
 });
-
+// Virtual to connect chats with a particular user
 userSchema.virtual('chats', {
     ref: 'Chat',
     localField: '_id',
     foreignField: 'owner'
 });
-
+// Function to generate JWT
 userSchema.methods.generateAuthToken = async function () {
     const user = this;
     const token = jwt.sign({ _id: user._id.toString() }, 'thisismychatbot');
@@ -55,7 +55,7 @@ userSchema.methods.generateAuthToken = async function () {
 
     return token;
 };
-
+// Function to return object without password and tokens fields
 userSchema.methods.toJSON = function() {
     const user = this;
     const userObject = user.toObject();
@@ -65,7 +65,7 @@ userSchema.methods.toJSON = function() {
 
     return userObject;
 };
-
+// Function to check for valid email and password
 userSchema.statics.findByCredentials = async (email, password) => {
     const user = await User.findOne({ email });
 
@@ -81,7 +81,7 @@ userSchema.statics.findByCredentials = async (email, password) => {
 
     return user;
 };
-
+// Middleware to hash password before saving to the database
 userSchema.pre('save', async function(next) {
     const user = this;
 

@@ -3,7 +3,7 @@ const User = require('../models/user');
 const Chat = require('../models/chat');
 const auth = require('../middleware/auth');
 const router = new express.Router();
-
+// Router method to post new user (registration)
 router.post('/users', async (req, res) => {
     const user = new User(req.body);
 
@@ -28,7 +28,7 @@ router.post('/users', async (req, res) => {
         res.status(400).send(error);
     };
 });
-
+// Router method to post details of existing user (login)
 router.post('/users/login', async (req, res) => {
     try {
         const user = await User.findByCredentials(req.body.email, req.body.password);
@@ -38,7 +38,7 @@ router.post('/users/login', async (req, res) => {
         res.status(400).send();
     };
 });
-
+// Router method to logout user from account 
 router.post('/users/logout', auth, async (req, res) => {
     try {
         // req.user.tokens = req.user.tokens.filter((token) => token.token !== req.token);  // Logout user from only the current device
@@ -50,11 +50,11 @@ router.post('/users/logout', auth, async (req, res) => {
         res.status(500).send();
     }
 });
-
+// Router method to get user details
 router.get('/users/me', auth, async (req, res) => {{
     res.send({ user: req.user, value: true });
 }});
-
+// Router method to update user details
 router.patch('/users/me', auth, async (req, res) => {
     const updates = Object.keys(req.body);
     const allowedUpdates = ['username', 'password', 'address'];
@@ -72,7 +72,7 @@ router.patch('/users/me', auth, async (req, res) => {
         res.status(400).send(error);
     };
 });
-
+// Router method to delete user
 router.delete('/users/me', auth, async (req, res) => {
     try {
         await req.user.remove();
