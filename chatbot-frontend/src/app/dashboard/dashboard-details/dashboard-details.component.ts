@@ -27,7 +27,7 @@ export class DashboardDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // Function to update username
   async updateName() {
     if (this.name) {
       await this.updateService.updateField({username: this.name})
@@ -37,7 +37,7 @@ export class DashboardDetailsComponent implements OnInit {
       alert('Username is empty');
     }
   }
-
+  // Function to update address
   async updateAddress() {
     if (this.address) {
       await this.updateService.updateField({address: this.address})
@@ -47,7 +47,7 @@ export class DashboardDetailsComponent implements OnInit {
       alert('Address is empty');
     }
   }
-
+  // Function to update password
   async updatePassword() {
 
     if (this.password && this.repeatPassword) {

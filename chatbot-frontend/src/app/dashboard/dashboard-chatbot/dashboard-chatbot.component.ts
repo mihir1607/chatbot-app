@@ -20,7 +20,7 @@ export class DashboardChatbotComponent implements OnInit {
   ngOnInit() {
     this.displayMessages();
   }
-
+  // Function to display user's previous chats on the app
   async displayMessages() {
     await this.chatsService.getMessages()
     .then((data) => {
@@ -31,7 +31,7 @@ export class DashboardChatbotComponent implements OnInit {
       });
     });
   }
-
+  // Function to add new message from the user to the app
   async addMessage() {
     if (this.query) {
       const u_m = {

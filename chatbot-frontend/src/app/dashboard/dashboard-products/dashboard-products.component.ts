@@ -19,7 +19,7 @@ export class DashboardProductsComponent implements OnInit {
   ngOnInit() {
     this.displayProducts();
   }
-
+  // Function to retrive products list and display them
   displayProducts(): void {
     this.getProductsService.getProducts().then((data) => {
       this.products = data;

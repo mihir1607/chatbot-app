@@ -34,13 +34,13 @@ export class DashboardComponent implements OnInit {
       console.log('No token: Dashboard');
     }
   }
-  
+  // Function to check for token validity
   async checkToken() {
     await this.tokenCheckService.verifyToken().then((data: any) => {
       this.isAuthenticated = data.value;
     });
   }
-
+  // Function to logout user
   async logoutUser() {
     await this.logoutService.logout().then((data) => {
       this.userDataService.name = '';
