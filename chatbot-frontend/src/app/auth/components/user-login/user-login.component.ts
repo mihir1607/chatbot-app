@@ -26,6 +26,8 @@ export class UserLoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Function to send details to UserLoginService and ask for login permission
+
   async loginUser() {
     if (this.user.email && this.user.password) {
       await this.userLoginService.loginUser(this.user)
@@ -40,7 +42,7 @@ export class UserLoginComponent implements OnInit {
       alert('One or more fields are empty.');
     }
   }
-
+  // Function to clear all fields on the page
   clearFields() {
     this.user.email = '';
     this.user.password = '';

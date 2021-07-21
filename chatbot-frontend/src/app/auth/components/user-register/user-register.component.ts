@@ -31,14 +31,14 @@ export class UserRegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // Function to clear all fields on the page
   clearFields() {
     this.user.username = '';
     this.user.email = '';
     this.user.password = '';
     this.repeatPassword = '';
   }
-
+  // Function to send registration request to UserSignUp service
   async addUser() {
     if (this.user.username && this.user.email && this.user.password) {
       if (this.user.password === this.repeatPassword) {
