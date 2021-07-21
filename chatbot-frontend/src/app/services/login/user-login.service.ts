@@ -13,7 +13,7 @@ export class UserLoginService {
   constructor(
     private http: HttpClient,
     ) { }
-
+  // Function to send login details to the server
   loginUser(user: UserLogin) {
     const headers = { 'content-type': 'application/json' };
     const body = JSON.stringify(user);

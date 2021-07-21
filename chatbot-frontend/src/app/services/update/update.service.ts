@@ -15,7 +15,7 @@ export class UpdateService {
     private http: HttpClient,
     private userDataService: UserDataService
   ) { }
-
+    // Function to update any user detail
     async updateField(obj: any) {
       const token = this.userDataService.token;
       const headers = new HttpHeaders()

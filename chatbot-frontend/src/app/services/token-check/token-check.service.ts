@@ -14,7 +14,7 @@ export class TokenCheckService {
     private http: HttpClient,
     private userDataService: UserDataService
     ) { }
-
+  // Function to verify user token
   async verifyToken() {
     const token = this.userDataService.token;
     const headers = new HttpHeaders()

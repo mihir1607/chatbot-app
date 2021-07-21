@@ -15,7 +15,7 @@ export class GetProductsService {
     private http: HttpClient,
     private userDataService: UserDataService
   ) { }
-
+  // Function to retrieve products list from the server
   async getProducts() {
     const token = this.userDataService.token;
     const headers = new HttpHeaders()

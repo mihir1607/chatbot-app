@@ -14,7 +14,7 @@ export class UserDataService {
   chatbot: Message[] = [];
 
   constructor() { }
-
+  // Getters and setters for different user attributes
   set name(value: string) {
     this.username = value;
   }

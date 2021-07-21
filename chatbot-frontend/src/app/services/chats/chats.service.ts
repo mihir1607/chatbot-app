@@ -17,7 +17,7 @@ export class ChatsService {
     private http: HttpClient,
     private userDataService: UserDataService
   ) { }
-
+    // Function to retrieve messages from server
   async getMessages() {
     const token = this.userDataService.token;
     const headers = new HttpHeaders()
@@ -30,7 +30,7 @@ export class ChatsService {
       return error;
     };
   }
-
+  // Function to send new messages to the server and retrieve response
   async sendNewMsg(msg: string) {
     const token = this.userDataService.token;
     const headers = new HttpHeaders()

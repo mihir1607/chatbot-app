@@ -11,7 +11,7 @@ export class UserSignUpService {
   registerURL: string = 'users';
 
   constructor(private http: HttpClient) { }
-  
+  // Function to register new user
   async addUser(user: UserRegister) {
     const headers = { 'content-type': 'application/json' };
     const body = JSON.stringify(user);

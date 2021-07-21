@@ -13,7 +13,7 @@ export class LogoutService {
     private http: HttpClient,
     private userDataService: UserDataService
   ) { }
-
+  // Function to logout user
   async logout() {
     const token = this.userDataService.token;
     const headers = new HttpHeaders()
