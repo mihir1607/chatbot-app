@@ -1,6 +1,12 @@
 # Chatbot Application
 
+Customer Support Chatbot to answer FAQs and place orders
+
 This chatbot application is intended to support customers by placing orders for them as well as to answer questions posted by the user in natural language. The chatbot can answer the questions based on natural language as well as place orders using a pre-defined syntax.
+
+## Objective
+
+Creae a chatbot for customer support to answer frequently ask question and order any product example laptop, mobile etc
 
 ## Technologies Used
 
