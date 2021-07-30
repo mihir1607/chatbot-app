@@ -48,6 +48,7 @@ All fields are compulsory.
 5. The 'code' field will be used while placing orders.
 6. You can add these details as you like.
 7. 'price' should be a number and 'img' should be an image URL.
+8. Close the database and backend applications when all entries have been added.
 
 ### Starting up the application
 
