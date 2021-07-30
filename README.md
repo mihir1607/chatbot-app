@@ -45,7 +45,8 @@ Clone the repo to your system and use npm install in the chatbot-frontend folder
 &nbsp;&nbsp;&nbsp;"code": "sony_ep_2"  
 }  
 All fields are compulsory.
-5. The 'code' field will be used while placing orders.
+5. The 'code' field will be used while placing orders. You can add these details as you like.
+6. 'price' should be a number and 'img' should be an image URL.
 
 ### Starting up the application
 
