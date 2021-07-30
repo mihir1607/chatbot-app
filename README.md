@@ -30,6 +30,23 @@ Clone the repo to your system and use npm install in the chatbot-frontend folder
 4. Run the program once, this will train the model and create file clf.pkl.
 5. Undo the changes made in step 3, the program will then be able to run with the node application.
 
+### Setting up the product database
+
+1. Start the backend application and the database (see steps 4, 5 and 6 in section 'Starting up the application')
+2. Open Postman application
+3. Send multiple POST requests to the URL: localhost:3000/products
+4. The Body for each request should be of the following JSON format:
+{
+      "name": "Sony 08XX Earphones",
+      "img": "https://www.sony.co.in/image/0db517b7884d87c665c1ca403bc22ce2?fmt=pjpeg&wid=660&hei=660&bgcolor=F1F5F9&bgc=F1F5F9",
+      "desc": "Noice cancelling earphones with neckband by Sony, designed to eliminate external noise. Black in color.",
+      "manufacturer": "Sony",
+      "price": 3999,
+      "code": "sony_ep_2"
+}
+All fields are compulsory.
+5. The 'code' field will be used while placing orders.
+
 ### Starting up the application
 
 1. Open 3 terminal windows
