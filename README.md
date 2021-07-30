@@ -35,7 +35,7 @@ Clone the repo to your system and use npm install in the chatbot-frontend folder
 1. Start the backend application and the database (see steps 4, 5 and 6 in section 'Starting up the application')
 2. Open Postman application
 3. Send multiple POST requests to the URL: localhost:3000/products
-4. The Body for each request should be of the following JSON format:  
+4. The Body for each request should be of the following JSON format (example below):  
 {  
 &nbsp;&nbsp;&nbsp;"name": "Sony 08XX Earphones",  
 &nbsp;&nbsp;&nbsp;"img": "https://www.sony.co.in/image/0db517b7884d87c665c1ca403bc22ce2?fmt=pjpeg&wid=660&hei=660&bgcolor=F1F5F9&bgc=F1F5F9",  
