@@ -67,4 +67,4 @@ mongodb/bin/mongod.exe --dbpath=mongodb-data
 1. Use the commands mentioned in the chatbot screen to place orders.
 2. The 'code' can be found in the page to view products.
 3. See Home and About Us pages to more about website and the dealer.
-4. Try greeting the chatbot by saying 'Hello' or ask customer care questions like 'Can I take the shipment after checking the contents inside?' or 'What items are eligible for free replacement?'by rephrasing them a bit.
+4. Try greeting the chatbot by saying 'Hello' or ask customer care questions like 'Can I take the shipment after checking the contents inside?' or 'What items are eligible for free replacement?' by rephrasing them a bit.
