@@ -61,3 +61,10 @@ All fields are compulsory.
 in your system, and setting dbpath parameter as your mongodb data folder. Something like this-
 mongodb/bin/mongod.exe --dbpath=mongodb-data
 7. Once all the programs are active, you will be directed to the web appliaction.
+
+## Usage Instructions
+
+1. Use the commands mentioned in the chatbot screen to place orders.
+2. The 'code' can be found in the page to view products.
+3. See Home and About Us pages to more about website and the dealer.
+4. Try greeting the chatbot by saying 'Hello' or ask customer care questions like 'Can I take the shipment after checking the contents inside?' or 'What items are eligible for free replacement?'by rephrasing them a bit.
